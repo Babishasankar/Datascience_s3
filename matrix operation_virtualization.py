@@ -1,14 +1,16 @@
-import numpy as np
+import numpy
 
-mat1 = np.matrix([[1, 2, 5], [3, 4, 8], [4, 2, 6]])
-mat2 = np.matrix([[2, 3, 1], [4, 7, 9], [2, 2, 1]])
+matrix1 = numpy.matrix([[1, 2, 3], [1, 1, 1], [1, 1, 1]])
+matrix2 = numpy.matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+print("Matrix 1=\n", matrix1)
+print("Matrix 2=\n", matrix2)
+matrix3 = numpy.add(matrix1, matrix2)
+matrix4 = numpy.subtract(matrix1, matrix2)
+matrix5 = numpy.matmul(matrix1, matrix2)
+matrix6 = numpy.transpose(matrix1)
+print("Matrix 1 + Matrix 2=\n", matrix3)
+print("Matrix 1 - Matrix 2=\n", matrix4)
+print("Matrix 1 * Matrix 2=\n", matrix5)
+print("2 * Matrix 1=\n", 2*matrix1)
+print("Transpose of Matrix 1=\n", matrix6)
 
-print("Matrix1:\n", mat1)
-print("Matrix2:\n", mat2)
-print()
-
-print("Matrix Addition:\n", np.add(mat1, mat2))
-print("Matrix Subtraction:\n", np.subtract(mat1, mat2))
-print("Matrix Multiplication:\n", np.matmul(mat1, mat2))
-print("Scalar Multiplication of Matrix1 by 2:\n", 2 * mat1)
-print("Transpose of Matrix1:\n", np.transpose(mat1))
